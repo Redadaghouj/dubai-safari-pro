@@ -1,0 +1,70 @@
+.hero-header {
+  height: calc(100vh - 83px);
+  background-image: url(../../images/dubaiii.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+.hero-header .search-input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero-header .search-input input {
+  outline: none;
+  border: 0;
+  border-radius: 26px;
+  font-size: 18px;
+}
+
+.hero-header .search-input input[type='text'] {
+  padding: 20px 50px;
+  width: 100%;
+}
+
+.hero-header .search-input input[type='button'] {
+  padding: 13px 20px;
+  cursor: pointer;
+  background-color: var(--orange-color);
+  color: #fff;
+  position: absolute;
+  right: 7px;
+  transition: opacity 0.4s;
+}
+
+.hero-header .search-input input[type='button']:hover {
+  opacity: 0.9;
+}
+
+.hero-header .search-input i {
+  position: absolute;
+  left: 13px;
+  font-size: 20px;
+  color: #a7a7a7;
+}
+
+.hero-header .hero-text {
+  color: #fff;
+  position: absolute;
+  bottom: 60px;
+}
+
+.hero-header .hero-text :first-child {
+  font-size: 40px;
+}
+
+.hero-header .hero-text :last-child {
+  font-size: 70px;
+}
+
+@media (max-width: 721px) {
+  .hero-header .search-input input {
+    font-size: 16px;
+  }
+
+  .hero-header .hero-text :last-child {
+    font-size: 50px;
+  }
+}

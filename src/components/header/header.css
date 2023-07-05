@@ -12,7 +12,7 @@
 }
 
 .header .container a img {
-  width: 60px;
+  width: 48px;
   margin-right: 3px;
 }
 
@@ -28,6 +28,7 @@
 
 .header .container ul {
   display: flex;
+  z-index: 2;
 }
 
 .header .container ul a li {
@@ -61,7 +62,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     background-color: #fff;
     transition: clip-path 0.5s;
   }
