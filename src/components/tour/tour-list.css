@@ -1,0 +1,21 @@
+.tour-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+select {
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 40px;
+}
