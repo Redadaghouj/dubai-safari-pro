@@ -1,0 +1,26 @@
+.services-item {
+  border: 1px solid #333;
+  border-radius: 26px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+}
+
+.services-item:hover {
+  background-color: var(--orange-color);
+  color: white;
+  border-color: white;
+}
+
+.services-item i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .services-item {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
