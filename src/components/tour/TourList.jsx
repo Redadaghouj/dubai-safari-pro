@@ -1,14 +1,15 @@
 import React from 'react';
 import './tour-list.css';
 import TourCard from './TourCard';
-import { toursList } from '../../data';
 
-function TourList() {
+function TourList({ toursList }) {
   return (
     <div className='tour section-py'>
       <div className='container'>
         <div className='tour-header'>
-          <span>24 tours found</span>
+          <span className='search-result'>
+            24 tours found <i className='fa-solid fa-circle-info'></i>
+          </span>
           <select name='filter' id='filter'>
             <option value='default'>Recommended</option>
             <option value='low-to-high'>Price - Low to high</option>

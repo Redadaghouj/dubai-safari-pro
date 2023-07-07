@@ -6,6 +6,7 @@ function TourCard({ data }) {
   return (
     <div className='card'>
       <img src={data.image} alt={data.title} />
+      <div className='label'>adventure</div>
       <div className='card-text'>
         <h3 className='title'>{data.title}</h3>
         <p className='duration'>{data.duration} - Pickup available</p>
