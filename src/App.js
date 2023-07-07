@@ -10,6 +10,7 @@ import SortTours from './components/sort-tours/SortTours';
 import { paginate } from './utils/pagination';
 import { sorting } from './utils/sort';
 import Banner from './components/banner/Banner';
+import NewsLetter from './components/news-letter/NewsLetter';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -40,6 +41,7 @@ function App() {
         pages={pages}
       />
       <Banner />
+      <NewsLetter />
     </div>
   );
 }
