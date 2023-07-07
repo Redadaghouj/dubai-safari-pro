@@ -9,25 +9,22 @@
 }
 
 .pagination .container .page {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border: 1px solid var(--orange-color);
+  border-radius: 50%;
   color: var(--orange-color);
-  font-weight: 600;
   transition: opacity 0.4s;
   outline: none;
+  margin-right: 3px;
+  margin-left: 3px;
 }
 
 .pagination .container .page:not(.active):hover {
   opacity: 0.7;
-}
-
-.pagination .container .page:not(:last-child) {
-  border-right: 0;
 }
 
 .pagination .container .page.active {
@@ -35,18 +32,16 @@
   color: white;
 }
 
-.pagination .container .page.prev {
-  border-radius: 26px 0 0 26px;
-  width: 70px;
-}
-
+.pagination .container .page.prev,
 .pagination .container .page.next {
-  border-radius: 0 26px 26px 0;
-  width: 70px;
+  border: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 16px;
 }
 
 .pagination .container .page.prev:disabled,
 .pagination .container .page.next:disabled {
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.4;
 }

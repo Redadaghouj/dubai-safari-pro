@@ -7,37 +7,39 @@ import TourList from './components/tour/TourList';
 import { toursList } from './data';
 import Pagination from './components/pagination/Pagination';
 import SortTours from './components/sort-tours/SortTours';
+import { paginate } from './utils/pagination';
+import { sorting } from './utils/sort';
+import Banner from './components/banner/Banner';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortType, setSortType] = useState('recommended');
 
-  const TOUR_PER_PAGE = 6;
-  const pages = Math.ceil(toursList.length / TOUR_PER_PAGE);
-  const startIndex = (currentPage - 1) * TOUR_PER_PAGE;
-  const finishedIndex = currentPage * TOUR_PER_PAGE;
+  const sortedTourList = sorting(sortType, toursList);
 
-  const sortedTourList =
-    sortType === 'low'
-      ? toursList.sort((a, b) => a.priceFrom - b.priceFrom)
-      : toursList.sort((a, b) => b.priceFrom - a.priceFrom);
-
-  console.log(sortedTourList);
-
-  const toursResult = sortedTourList.slice(startIndex, finishedIndex);
+  const { pages, orderToursList } = paginate(
+    toursList,
+    currentPage,
+    sortedTourList
+  );
 
   return (
     <div className='App'>
       <Header />
       <HeroHeader />
       <Services />
-      <SortTours toursLength={toursList.length} setSortType={setSortType} />
-      <TourList toursList={toursResult} />
+      <SortTours
+        toursLength={toursList.length}
+        sortType={sortType}
+        setSortType={setSortType}
+      />
+      <TourList toursList={orderToursList} />
       <Pagination
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         pages={pages}
       />
+      <Banner />
     </div>
   );
 }

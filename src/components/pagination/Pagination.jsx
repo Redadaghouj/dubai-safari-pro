@@ -15,7 +15,7 @@ function Pagination({ currentPage, setCurrentPage, pages }) {
           className='page prev'
           onClick={() => setCurrentPage(currentPage - 1)}
         >
-          Prev
+          <i className='fa-solid fa-arrow-left-long'></i>
         </button>
         {generatedPages.map((page) => (
           <div
@@ -31,7 +31,7 @@ function Pagination({ currentPage, setCurrentPage, pages }) {
           className='page next'
           onClick={() => setCurrentPage(currentPage + 1)}
         >
-          Next
+          <i className='fa-solid fa-arrow-right-long'></i>
         </button>
       </div>
     </div>
