@@ -1,0 +1,94 @@
+.footer {
+  background-color: hsla(15, 94%, 51%, 0.68);
+  /* background-color: #3f96b3; */
+  color: white;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .container .title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.footer .container .lang-curr select {
+  border-radius: 2px;
+  font-size: 15px;
+}
+
+.footer .container .lang-curr .language {
+  margin-bottom: 25px;
+}
+
+.footer .container .support .title,
+.footer .container .company .title,
+.footer .container .contact .title {
+  margin-bottom: 22px;
+}
+
+.footer .container .support ul li,
+.footer .container .company ul li {
+  margin-bottom: 7px;
+}
+
+.footer .container .support ul li a,
+.footer .container .company ul li a,
+.footer .container .work-with-us a {
+  color: white;
+  font-size: 15px;
+}
+
+.footer .container .support ul li a:hover,
+.footer .container .company ul li a:hover,
+.footer .container .work-with-us a:hover {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.footer .container .work-with-us a {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer .contact .social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.footer .contact .social-icons .icon {
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.footer .contact .social-icons .icon:hover {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
+.footer .contact .copyright {
+  font-size: 13px;
+}
+
+@media (max-width: 767px) {
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .footer .container .support .title,
+  .footer .container .company .title,
+  .footer .container .contact .title {
+    margin-top: 22px;
+    text-decoration: line-through;
+  }
+}
