@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.css';
 import { languages, currencies } from '../../data';
+import SelectBox from './SelectBox';
 
 function Footer() {
   return (
@@ -8,24 +9,10 @@ function Footer() {
       <div className='container'>
         <div className='lang-curr'>
           <div className='language'>
-            <p className='title'>Language</p>
-            <select name='language' id='language'>
-              {languages.map((lang) => (
-                <option key={lang.id} value={lang.value}>
-                  {lang.value}
-                </option>
-              ))}
-            </select>
+            <SelectBox data={languages} title='Language' />
           </div>
           <div className='currency'>
-            <p className='title'>Currency</p>
-            <select name='currency' id='currency'>
-              {currencies.map((curr) => (
-                <option key={curr.id} value={curr.value}>
-                  {curr.value}
-                </option>
-              ))}
-            </select>
+            <SelectBox data={currencies} title='Currency' />
           </div>
         </div>
         <div className='support'>
