@@ -1,0 +1,65 @@
+.login,
+.register {
+  height: calc(100vh - 84px);
+}
+
+.login .container,
+.register .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login .container .title,
+.register .container .title {
+  font-size: 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.login .container .title::after,
+.register .container .title::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  height: 15px;
+  width: 100%;
+  background-color: var(--orange-color);
+  z-index: -1;
+}
+
+form {
+  width: 40%;
+}
+
+form input {
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+form input:not([type='submit']) {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+form input[type='submit'] {
+  padding: 10px 40px;
+  cursor: pointer;
+  background-color: var(--orange-color);
+  color: white;
+  margin-top: 30px;
+  border-radius: 26px;
+  transition: opacity 0.4s;
+  font-size: 16px;
+}
+
+form input[type='submit']:hover {
+  opacity: 0.8;
+}

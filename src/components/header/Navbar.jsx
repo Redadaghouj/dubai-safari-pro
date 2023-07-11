@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar({ toggle, setToggle }) {
   return (
@@ -8,30 +9,30 @@ function Navbar({ toggle, setToggle }) {
           clipPath: toggle && 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
         }}
       >
-        <a href='/'>
+        <Link to='/'>
           <li>
             <i className='fa-solid fa-house'></i>
             Home
           </li>
-        </a>
-        <a href='/'>
+        </Link>
+        <Link to='/about'>
           <li>
             <i className='fa-solid fa-address-card'></i>
             About
           </li>
-        </a>
-        <a href='/'>
+        </Link>
+        <Link to='/login'>
           <li>
             <i className='fa-solid fa-right-to-bracket'></i>
             Login
           </li>
-        </a>
-        <a href='/'>
+        </Link>
+        <Link to='/register'>
           <li>
             <i className='fa-solid fa-user-plus'></i>
             Register
           </li>
-        </a>
+        </Link>
       </ul>
       <div className='menu-toggle' onClick={() => setToggle(!toggle)}>
         {toggle ? (

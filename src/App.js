@@ -1,48 +1,26 @@
-import { useState } from 'react';
 import './App.css';
+import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import Header from './components/header/Header.jsx';
-import HeroHeader from './components/hero-header/HeroHeader';
-import Services from './components/services/Services';
-import TourList from './components/tour/TourList';
-import { toursList } from './data';
-import Pagination from './components/pagination/Pagination';
-import SortTours from './components/sort-tours/SortTours';
-import { paginate } from './utils/pagination';
-import { sorting } from './utils/sort';
-import Banner from './components/banner/Banner';
-import NewsLetter from './components/news-letter/NewsLetter';
 import Footer from './components/footer/Footer';
+import HomePage from './pages/home/HomePage';
+import AboutPage from './pages/about/AboutPage';
+import Login from './pages/forms/Login';
+import Register from './pages/forms/Register';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [sortType, setSortType] = useState('recommended');
-
-  const sortedTourList = sorting(sortType, toursList);
-
-  const { pages, orderToursList } = paginate(
-    toursList,
-    currentPage,
-    sortedTourList
-  );
-
   return (
     <div className='App'>
-      <Header />
-      <HeroHeader />
-      <Services />
-      <SortTours
-        toursLength={toursList.length}
-        sortType={sortType}
-        setSortType={setSortType}
-      />
-      <TourList toursList={orderToursList} />
-      <Pagination
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        pages={pages}
-      />
-      <Banner />
-      <NewsLetter />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/' element={<Outlet />}>
+            <Route path='login' element={<Login />} />
+            <Route path='register' element={<Register />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
       <Footer />
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from '../../images/logo.png';
 import './header.css';
 import Navbar from './Navbar';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [toggle, setToggle] = useState(false);
@@ -9,10 +10,10 @@ function Header() {
   return (
     <header className='header'>
       <div className='container'>
-        <a href='/'>
+        <Link to='/'>
           <img src={logo} alt='Dubai Safari' />
           Dubai desert safari
-        </a>
+        </Link>
         <Navbar toggle={toggle} setToggle={setToggle} />
       </div>
     </header>

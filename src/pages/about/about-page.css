@@ -1,0 +1,41 @@
+.about {
+  height: calc(100vh - 83px);
+}
+
+.about .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--primary-text-colo);
+}
+
+.about .container .title {
+  font-size: 50px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.about .container .title::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  height: 15px;
+  width: 100%;
+  background-color: var(--orange-color);
+  z-index: -1;
+}
+
+.about .container .desc {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.about .container .version {
+  font-size: 19px;
+}
+
+.about .container .version b {
+  color: var(--orange-color);
+}
