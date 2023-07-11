@@ -1,8 +1,10 @@
 import React from 'react';
 import './tour-card.css';
 import RatingStars from './RatingStars';
+import { useNavigate } from 'react-router-dom';
 
 function TourCard({ data }) {
+  const route = useNavigate();
   return (
     <div className='card'>
       <img src={data.image} alt={data.title} />
@@ -18,7 +20,9 @@ function TourCard({ data }) {
         <h3 className='price'>
           From {data.priceFrom}$ <span>per person</span>
         </h3>
-        <div className='card-btn'>See More</div>
+        <div className='card-btn' onClick={() => route(`/route/${data.id}`)}>
+          See More
+        </div>
       </div>
     </div>
   );

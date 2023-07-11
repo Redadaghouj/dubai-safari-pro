@@ -1,6 +1,9 @@
-.login,
-.register {
+.login {
   height: calc(100vh - 84px);
+}
+
+.register {
+  height: calc(100vh - 44px);
 }
 
 .login .container,
@@ -28,6 +31,10 @@
   width: 100%;
   background-color: var(--orange-color);
   z-index: -1;
+}
+
+.register {
+  padding-bottom: 20px;
 }
 
 form {
@@ -62,4 +69,10 @@ form input[type='submit'] {
 
 form input[type='submit']:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  form {
+    width: 100%;
+  }
 }

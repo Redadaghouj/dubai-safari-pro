@@ -6,6 +6,7 @@ import HomePage from './pages/home/HomePage';
 import AboutPage from './pages/about/AboutPage';
 import Login from './pages/forms/Login';
 import Register from './pages/forms/Register';
+import TourPage from './pages/tour/TourPage';
 
 function App() {
   return (
@@ -15,13 +16,14 @@ function App() {
         <Routes>
           <Route index element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
+          <Route path='tour/:tourId' element={<TourPage />} />
           <Route path='/' element={<Outlet />}>
             <Route path='login' element={<Login />} />
             <Route path='register' element={<Register />} />
           </Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
     </div>
   );
 }
