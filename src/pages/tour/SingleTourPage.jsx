@@ -1,13 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import safariImg from '../../images/dubaiii.jpg';
 import RatingStars from '../../components/tour/RatingStars';
 import AboutCard from '../../components/tour/AboutCard';
 import './single-tour-page.css';
 import { Link } from 'react-router-dom';
+import { toursList, activities } from '../../data';
 
 function SingleTourPage() {
   const { tourId } = useParams();
+  const tour = toursList.find((el) => el.id === +tourId);
+
   return (
     <div className='single-tour'>
       <div className='header-img'>
@@ -20,18 +22,16 @@ function SingleTourPage() {
       </div>
       <div className='container section-py'>
         <div className='tour-wrapper section-py'>
-          <h1 className='tour-title'>
-            Dubai: Half Day Desert & Quad Bike Option
-          </h1>
+          <h1 className='tour-title'>{tour.title}</h1>
           <div className='info'>
             <RatingStars />
-            <div className='rating'>5</div>
-            <div className='reviews'>(5,580 reviews)</div>
+            <div className='rating'>{tour.rating}</div>
+            <div className='reviews'>({tour.reviews} reviews)</div>
             <div className='act-provider'>
               Activity Provider : <span>Youssef Abbas</span>
             </div>
           </div>
-          <img src={safariImg} alt='img' />
+          <img src={tour.image} alt='img' />
           <div className='desc'>
             <h2 className='desc-title'>Description</h2>
             <div className='desc-text'>
@@ -43,11 +43,15 @@ function SingleTourPage() {
           </div>
           <div className='about-activity'>
             <h2 className='about-activity-title'>About this activity</h2>
-            <AboutCard />
-            <AboutCard />
-            <AboutCard />
-            <AboutCard />
-            <AboutCard />
+            {activities.map((activity) => {
+              return (
+                <AboutCard
+                  icon={activity.icon}
+                  title={activity.title}
+                  desc={activity.description}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
