@@ -1,0 +1,24 @@
+.about-card {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.about-card > * {
+  padding-left: 30px;
+}
+
+.about-card i {
+  color: var(--orange-color);
+  font-size: 19px;
+  position: absolute;
+  top: 3px;
+  left: -30px;
+}
+
+.about-card .about-title {
+  font-size: 18px;
+}
+
+.about-card .about-desc {
+  color: #8d8b8b;
+}

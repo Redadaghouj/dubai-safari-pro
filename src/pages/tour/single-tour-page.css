@@ -1,0 +1,74 @@
+.single-tour .header-img {
+  background-image: url(../../images/dubaiii.jpg);
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.single-tour .header-img::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.single-tour .header-img .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.single-tour .header-img .container .back-home {
+  background-color: var(--orange-color);
+  padding: 8px 18px;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.4s;
+  font-size: 15px;
+}
+
+.single-tour .header-img .container .back-home:hover {
+  opacity: 0.8;
+}
+
+.single-tour .container .tour-wrapper .info {
+  display: flex;
+  margin: 20px 0;
+}
+
+.single-tour .container .tour-wrapper .info > * {
+  margin-right: 15px;
+}
+
+.single-tour .container .tour-wrapper .info .reviews {
+  color: #8d8b8b;
+}
+
+.single-tour .container .tour-wrapper .info .act-provider {
+  font-weight: bold;
+}
+
+.single-tour .container .tour-wrapper .info .act-provider span {
+  color: var(--orange-color);
+}
+
+.single-tour .container .tour-wrapper img {
+  width: 100%;
+  height: 500px;
+}
+
+.single-tour .container .tour-wrapper .desc {
+  margin: 20px 0;
+}
+
+.single-tour .container .tour-wrapper .desc h2,
+.single-tour .container .tour-wrapper .about-activity h2 {
+  margin-bottom: 20px;
+}

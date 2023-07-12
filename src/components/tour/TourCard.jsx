@@ -20,7 +20,7 @@ function TourCard({ data }) {
         <h3 className='price'>
           From {data.priceFrom}$ <span>per person</span>
         </h3>
-        <div className='card-btn' onClick={() => route(`/route/${data.id}`)}>
+        <div className='card-btn' onClick={() => route(`/tour/${data.id}`)}>
           See More
         </div>
       </div>
