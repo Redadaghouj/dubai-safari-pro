@@ -12,7 +12,10 @@ function SingleTourPage() {
 
   return (
     <div className='single-tour'>
-      <div className='header-img'>
+      <div
+        className='header-img'
+        style={{ backgroundImage: `url(${tour.image})` }}
+      >
         <div className='container'>
           <h2 className='title'>Safari Details</h2>
           <Link to='/' className='back-home'>
@@ -46,6 +49,7 @@ function SingleTourPage() {
             {activities.map((activity) => {
               return (
                 <AboutCard
+                  key={activity.id}
                   icon={activity.icon}
                   title={activity.title}
                   desc={activity.description}

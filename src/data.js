@@ -321,28 +321,33 @@ export const currencies = [
 
 export const activities = [
   {
+    id: 1,
     icon: <i className='fa-solid fa-calendar-days'></i>,
     title: 'Free Cancellation',
     description: 'Cancel up to 24 hours in advance to receive a full refund',
   },
   {
+    id: 2,
     icon: <i className='fa-solid fa-calendar-plus'></i>,
     title: 'Reserve now & pay later',
     description:
       'Keep your travel plan flexible - book your spot and pay nothing today.',
   },
   {
+    id: 3,
     icon: <i className='fa-solid fa-virus-covid'></i>,
     title: 'Covid -19 precautions',
     description:
       'Special health and safety measures are in place. Check your activity voucher once you book for full details.',
   },
   {
+    id: 4,
     icon: <i className='fa-regular fa-clock'></i>,
     title: 'Duration 4 - 7 hours',
     description: 'Check availability to see staring times.',
   },
   {
+    id: 5,
     icon: <i className='fa-solid fa-user'></i>,
     title: 'Live tour guide',
     description: 'English',

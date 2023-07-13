@@ -17,7 +17,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path='/about' element={<AboutPage />} />
           <Route path='tour/:tourId' element={<SingleTourPage />} />
-          <Route path='/auth' element={<Outlet />}>
+          <Route path='/' element={<Outlet />}>
             <Route path='login' element={<Login />} />
             <Route path='register' element={<Register />} />
           </Route>
